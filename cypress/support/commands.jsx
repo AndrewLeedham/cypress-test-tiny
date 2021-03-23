@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+require('@cypress/react/support')
+const { mount } = require('@cypress/react');
+const {useState} = require('react');
+
+const Wrapper = ({children}) => {
+    const [state, setState] = useState();
+    return <p>{children}</p>
+
+}
+
+Cypress.Commands.add("mount", (children) => {
+    return mount(<Wrapper>{children}</Wrapper>);
+});

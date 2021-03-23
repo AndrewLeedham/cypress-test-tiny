@@ -1,6 +1,8 @@
 /// <reference types="cypress" />
+const Component = require('./Component');
+
 describe('page', () => {
   it('works', () => {
-    cy.visit('https://example.cypress.io')
+    cy.mount(<Component/>)
   })
 })
