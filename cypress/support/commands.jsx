@@ -34,6 +34,6 @@ const Wrapper = ({children}) => {
 
 }
 
-Cypress.Commands.add("mount", (children) => {
-    return mount(<Wrapper>{children}</Wrapper>);
+Cypress.Commands.add("mount", (children, options) => {
+    return mount(<Wrapper>{children}</Wrapper>, options);
 });

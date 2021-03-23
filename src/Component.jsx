@@ -1,6 +1,6 @@
-const {useState} = require('react');
+import {useState} from 'react';
 
-module.exports = ({children}) => {
+export default ({children}) => {
     const [state, setState] = useState('component');
     return <h1>{state}</h1>
 }
